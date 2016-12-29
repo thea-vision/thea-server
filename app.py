@@ -4,6 +4,7 @@ import cv2
 import copy
 from os import listdir
 from os.path import isfile, join
+import base64
 
 class Object(object):
     pass
@@ -163,8 +164,8 @@ def homepage():
         eyeCollection.append(copy.deepcopy(canny))
         eyeCollection.append(copy.deepcopy(eye))
         eyeNum = eyeNum + 3
-        jpeg = cv2.imencode('.jpeg', img)
-        jpeg_base64 = base64.b64encode(data.tostring())
+        png = cv2.imencode('.png', img)[1]
+        jpeg_base64 = base64.encodestring(png)
     return """
             <html>
             <head>
