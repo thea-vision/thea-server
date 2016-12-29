@@ -1,4 +1,4 @@
 Flask
-numpy
+numpy=1.11.2
 opencv-python
 gunicorn
