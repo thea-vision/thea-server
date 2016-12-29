@@ -1,2 +1,7 @@
 Flask
+matplotlib
+numpy
+opencv
+copy
+os
 gunicorn
