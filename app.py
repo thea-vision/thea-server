@@ -1,6 +1,5 @@
 from flask import Flask
 import numpy as np
-from matplotlib import pyplot as plt
 import cv2
 import copy
 from os import listdir
