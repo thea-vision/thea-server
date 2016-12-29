@@ -1,7 +1,5 @@
 Flask
 matplotlib
 numpy
-opencv
-copy
-os
+opencv-python
 gunicorn
