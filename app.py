@@ -149,7 +149,7 @@ def homepage():
                 #cv2.imshow('a', cannyLight)
                 #cv2.waitKey(0)
                 #cv2.destroyAllWindows()
-                circles = cv2.HoughCircles(threshLight,cv2.cv.CV_HOUGH_GRADIENT,params.lhResolutionScale,params.lhMinCircDist, param1=params.lcMinVal, param2=params.lhAccum, minRadius=1)
+                circles = cv2.HoughCircles(threshLight,cv2.CV_HOUGH_GRADIENT,params.lhResolutionScale,params.lhMinCircDist, param1=params.lcMinVal, param2=params.lhAccum, minRadius=1)
                 circles = np.uint16(np.around(circles))
 
                 for j in circles[0,:]:
