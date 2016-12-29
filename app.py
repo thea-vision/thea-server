@@ -68,7 +68,7 @@ def homepage():
         grayeye = cv2.GaussianBlur(cv2.cvtColor(eye, cv2.COLOR_BGR2GRAY),(params.gKernelX,params.gKernelY),params.sigmaX)
         ret, thresh1 = cv2.threshold(grayeye,params.tThresh,params.tMaxVal,params.tType)
         canny = cv2.Canny(thresh1, params.cMinVal, params.cMaxVal)
-        circles = cv2.HoughCircles(thresh1,cv2.cv.CV_HOUGH_GRADIENT,params.hResolutionScale,params.hMinCircDist, param1=params.cMinVal, param2=params.hAccum, minRadius=params.hMinRadius)
+        circles = cv2.HoughCircles(thresh1,cv2.CV_HOUGH_GRADIENT,params.hResolutionScale,params.hMinCircDist, param1=params.cMinVal, param2=params.hAccum, minRadius=params.hMinRadius)
         try:
             circles = np.uint16(np.around(circles))
         except Exception as e:
