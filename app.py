@@ -16,7 +16,7 @@ def homepage():
     eye_cascade = cv2.CascadeClassifier('haarcascade_eye.xml')
     imageSourcePath = "imageSource"
     imageOutputPath = "imageOutputs"
-    imageSources = [f for f in listdir(imageSourcePath) if isfile(join(imageSourcePath, f))]
+    #imageSources = [f for f in listdir(imageSourcePath) if isfile(join(imageSourcePath, f))]
 
     params = Object()
     #gaussianParams
