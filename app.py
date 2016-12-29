@@ -163,6 +163,18 @@ def homepage():
         eyeCollection.append(copy.deepcopy(canny))
         eyeCollection.append(copy.deepcopy(eye))
         eyeNum = eyeNum + 3
-    return str(img)
+        jpeg = cv2.imencode('.jpeg', img)
+        jpeg_base64 = base64.b64encode(data.tostring())
+    return """
+            <html>
+            <head>
+            <title>Fruit Nutritional Information</title>
+            </head>
+            <html>
+            <body>
+            <img src='data:image/jpeg;base64,%s' height = 640 width = 1200 />
+            </body>
+            </html
+            """ % (jpeg_base64)
 if __name__ == '__main__':
     app.run(debug=True, use_reloader=True)
