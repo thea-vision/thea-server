@@ -163,6 +163,6 @@ def homepage():
         eyeCollection.append(copy.deepcopy(canny))
         eyeCollection.append(copy.deepcopy(eye))
         eyeNum = eyeNum + 3
-    return img
+    return str(img)
 if __name__ == '__main__':
     app.run(debug=True, use_reloader=True)
