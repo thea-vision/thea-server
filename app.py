@@ -167,15 +167,11 @@ def homepage():
         png = cv2.imencode('.png', img)[1]
         jpeg_base64 = base64.encodestring(png)
     return """
-            <html>
-            <head>
-            <title>Fruit Nutritional Information</title>
-            </head>
-            <html>
+            <html><head><title>Thea</title></head>
             <body>
-            <img src='data:image/jpeg;base64,%s' height = 640 width = 1200 />
+            <img src='data:image/jpeg;base64,%s'/>
             </body>
-            </html
+            </htm>
             """ % (jpeg_base64)
 if __name__ == '__main__':
     app.run(debug=True, use_reloader=True)
