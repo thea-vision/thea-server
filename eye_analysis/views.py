@@ -16,7 +16,7 @@ from math import pi, sqrt, exp
 import time
 
 # define the path to the face detector
-FACE_DETECTOR_PATH = "{base_path}/cascades/haarcascade_frontalface_default.xml".format(
+EYE_DETECTOR_PATH = "{base_path}/haarcascade_eye.xml".format(
 	base_path=os.path.abspath(os.path.dirname(__file__)))
 
 @csrf_exempt
@@ -78,7 +78,7 @@ class Object(object):
 def analyze(img):
 
 	start_time = time.time()
-	eye_cascade = cv2.CascadeClassifier('haarcascade_eye.xml')
+	eye_cascade = cv2.CascadeClassifier(EYE_DETECTOR_PATH)
 
 	params = Object()
 	#gaussianParams
